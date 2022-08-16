@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.btl.quanlythuvien.DangNhapController">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ĐĂNG NHẬP" />
+      <HBox prefHeight="0.0" prefWidth="600.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Loại tài khoản" />
+            <ComboBox fx:id="cbxDoiTuong" prefWidth="150.0" />
+         </children>
+      </HBox>
+      <HBox prefHeight="0.0" prefWidth="600.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+            <TextField fx:id="txtUserName" prefHeight="26.0" prefWidth="170.0" />
+         </children>
+      </HBox>
+      <HBox prefHeight="0.0" prefWidth="600.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+            <PasswordField fx:id="txtPassWord" prefHeight="26.0" prefWidth="173.0" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="btnDangNhap" mnemonicParsing="false" onAction="#dangNhapHandler" text="Đăng nhập" />
+            <Button mnemonicParsing="false" onAction="#dangKyHandler" text="Đăng ký" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

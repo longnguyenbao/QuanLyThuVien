@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.btl.quanlythuvien.SachController">
+   <children>
+      <TabPane prefHeight="687.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Chi tiết sách">
+               <content>
+                  <VBox prefHeight="500.0" prefWidth="900.0">
+                     <children>
+                        <VBox prefHeight="340.0" prefWidth="600.0">
+                           <children>
+                              <HBox prefHeight="0.0" prefWidth="600.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mã sách" />
+                                    <TextField fx:id="txtMaSach" prefHeight="26.0" prefWidth="544.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="0.0" prefWidth="600.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tên sách" />
+                                    <TextField fx:id="txtTenSach" prefHeight="26.0" prefWidth="541.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="0.0" prefWidth="600.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mô tả" />
+                                    <TextArea fx:id="areaMoTa" prefHeight="38.0" prefWidth="556.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="0.0" prefWidth="600.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Năm xuất bản" />
+                                    <TextField fx:id="txtNamXuatBan" prefHeight="26.0" prefWidth="512.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="0.0" prefWidth="600.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nơi xuất bản" />
+                                    <TextField fx:id="txtNoiXuatBan" prefHeight="26.0" prefWidth="518.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="0.0" prefWidth="600.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày nhập" />
+                                    <DatePicker fx:id="dateNgayNhap" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="0.0" prefWidth="600.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vị trí" />
+                                    <TextField fx:id="txtViTri" prefHeight="26.0" prefWidth="562.0" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="176.0" prefHeight="0.0" prefWidth="600.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Danh mục" />
+                                    <ComboBox fx:id="cbxDanhMuc" prefHeight="26.0" prefWidth="181.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="137.0" prefWidth="600.0">
+                                 <children>
+                                    <TableView fx:id="tbTacGia" prefHeight="200.0" prefWidth="325.0" />
+                                    <VBox prefHeight="44.0" prefWidth="261.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="0.0" prefWidth="600.0">
+                                 <children>
+                                    <Button fx:id="btnLamMoi" mnemonicParsing="false" text="Làm mới" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox prefHeight="0.0" prefWidth="600.0">
+                           <children>
+                              <ComboBox fx:id="cbxLoaiTimKiem" prefWidth="150.0" />
+                              <TextField fx:id="txtKeywords" prefHeight="26.0" prefWidth="443.0" />
+                           </children>
+                        </HBox>
+                        <TableView fx:id="tbSach" prefHeight="200.0" prefWidth="600.0" />
+                     </children>
+                  </VBox>
+               </content>
+          </Tab>
+          <Tab text="Danh sách mượn">
+               <content>
+                  <VBox prefHeight="499.0" prefWidth="900.0">
+                     <children>
+                        <TableView fx:id="tbSachMuon" prefHeight="200.0" prefWidth="200.0" />
+                        <Button mnemonicParsing="false" onAction="#datSachHander" text="Đặt sách" />
+                     </children></VBox>
+               </content></Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>
